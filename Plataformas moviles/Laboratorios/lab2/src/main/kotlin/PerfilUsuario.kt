@@ -4,4 +4,7 @@ class PerfilUsuario(var ID: Int, var nombre: String, var apellido: String, var U
 
         Hobbies.add(Hobby)
     }
+    override fun toString(): String {
+        return "ID - ${ID}\n" + "Nombres - ${nombre}\n" + "Apellidos -${apellido}\n" + "UrlPhoto - ${UrlPhoto}\n" + "Edad - ${Edad}\n" + "Correo - ${Correo}\n" + "Biografia - ${Biografia}\n" + "Estado - ${Estado}\n" + "Hobbies - ${Hobbies}\n"
+    }
 }
