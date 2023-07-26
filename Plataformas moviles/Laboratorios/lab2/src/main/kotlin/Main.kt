@@ -1,5 +1,5 @@
 fun main(args: Array<String>) {
-
+    //inicializacion de la lista de usuarios
     val usuario : MutableList<PerfilUsuario> = mutableListOf(
         PerfilUsuario(1, "Juan", "Perez", null, 20, "oscargmail.com", "Hola", listOf("Activo"))
     )
@@ -8,6 +8,7 @@ fun main(args: Array<String>) {
         var numero = readln()
         when (numero) {
             "1" -> {
+                //creacion de un nuevo perfil
                 println("Ingrese su ID")
                 var ID = readln().toInt()
                 println("Ingrese su nombre")
@@ -22,14 +23,14 @@ fun main(args: Array<String>) {
                 var correo = readln()
                 println("Ingrese su biografia")
                 var biografia = readln()
-                lateinit var estado: String
+                lateinit var estado: String //lateinit para que no de error
                 println("Ingrese el numero de su estado \n 1. Activo \n 2. Inactivo \n 3. Pendiente")
                 when (readln()) {
                     "1" -> estado = "Activo"
                     "2" -> estado = "Inactivo"
                     "3" -> estado = "Pendiente"
                 }
-
+                //agregar el perfil a la lista de usuarios
                 usuario.add(
                     PerfilUsuario(
                         ID,
@@ -46,7 +47,7 @@ fun main(args: Array<String>) {
                 println("Perfil creado con exito")
 
             }
-
+            //previamente cree un toString en la clase PerfilUsuario para que se imprimiera de una manera mas ordenada y no me tirara la direccion de memoria
             "2" -> {
                 println("Ingrese su ID")
                 var ID = readln().toInt()
@@ -62,7 +63,7 @@ fun main(args: Array<String>) {
                 }
 
             }
-
+            //eliminacion de un perfil
             "3" -> {
                 println("Ingrese su ID")
                 var ID = readln().toInt()
@@ -71,7 +72,7 @@ fun main(args: Array<String>) {
                     listaUsuario.remove(i)
                 }
             }
-
+            //agregar un hobby a un perfil
             "4" -> {
                 println("Ingrese su ID")
                 var ID = readln().toInt()
