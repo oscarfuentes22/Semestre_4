@@ -42,7 +42,9 @@ fun Greeting(name: String, modifier: Modifier = Modifier , carnet: String){
     }
 }
 
-@Preview(showBackground = true)
+@Preview(
+    showBackground = true,
+    showSystemUi = true )
 @Composable
 fun GreetingPreview() {
     PruebaTheme {
