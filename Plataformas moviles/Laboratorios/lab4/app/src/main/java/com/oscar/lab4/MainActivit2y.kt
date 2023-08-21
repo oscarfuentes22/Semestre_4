@@ -142,13 +142,15 @@ fun Pantalla2(@DrawableRes id5 : Int,
 
         Spacer(Modifier.height(70.dp))
         Text(
-            text = "Oscar Andres Fuentes Dubón",
+            text = "Julio Martinez",
             fontWeight = FontWeight.Bold,
             fontStyle = FontStyle.Italic,
             modifier = Modifier
-                .padding(5.dp),
+                .padding(5.dp)
+                .offset(x = 100.dp),
             textAlign = TextAlign.Center,
             fontSize = 25.sp,
+
             )
         opcionDosTextos(
             idImagen = R.drawable.icone_de_service_noir
