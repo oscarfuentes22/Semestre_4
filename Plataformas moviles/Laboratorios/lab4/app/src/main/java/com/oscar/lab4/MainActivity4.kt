@@ -55,8 +55,7 @@ class MainActivity4 : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Pantalla4( R.drawable.baseline_check_24,
-                    )
+                    Pantalla4( R.drawable.baseline_check_24,)
                 }
             }
         }
@@ -64,9 +63,9 @@ class MainActivity4 : ComponentActivity() {
 }
 
 @Composable
-fun Pantalla4(@DrawableRes id5 : Int, ) {
+fun Pantalla4(@DrawableRes id5 : Int) {
     val outline_add_home_24 = painterResource(id = id5)
-    val outline_people_24 = painterResource(id = id6)
+
     Modifier.background(Color.LightGray)
 
     Column() {
@@ -180,11 +179,11 @@ fun Pantalla4(@DrawableRes id5 : Int, ) {
             Row(
                 modifier = Modifier
                     .padding(10.dp)
-                    .height(75.dp)
+                    .height(175.dp)
                     .fillMaxWidth()
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.outline_groups_2_24),
+                    painter = painterResource(id = R.drawable.outline_people_24),
                     contentDescription = "group",
                     modifier = Modifier
                         .padding(5.dp)
@@ -207,12 +206,47 @@ fun Pantalla4(@DrawableRes id5 : Int, ) {
                             .padding(1.dp),
                     )
                     Text(
-                        text = "Si se presenta un incidente o un percance porfavor marca el número de emergencia. ",
+                        text = "La Clínica UVG presenta los siguiente Servicios:" +
+
+
+                                "   - Plan Educacional sobre enfermedades",
                         fontSize = 13.sp,
                         modifier = Modifier
                             .padding(1.dp)
                             .fillMaxWidth(),
                         lineHeight = 15.sp
+                    )
+                    Text(
+                        text = "   -Atención a Emergerncias" ,
+                        modifier = Modifier
+                            .padding(1.dp)
+                            .fillMaxWidth(),
+                        lineHeight = 15.sp,
+                        fontSize = 13.sp,
+                    )
+                    Text(
+                        text = "  - Atencion a Enfermedade Comunes"  ,
+                        modifier = Modifier
+                            .padding(1.dp)
+                            .fillMaxWidth(),
+                        lineHeight = 15.sp,
+                        fontSize = 13.sp,
+                    )
+                    Text(
+                        text = "  - Plan sobre enfermedades"  ,
+                        modifier = Modifier
+                            .padding(1.dp)
+                            .fillMaxWidth(),
+                        lineHeight = 15.sp,
+                        fontSize = 13.sp,
+                    )
+                    Text(
+                        text = " Horario de Atención: 7:00a.m. a 8:30p.m. campus central Edificio F 119-120."  ,
+                        modifier = Modifier
+                            .padding(1.dp)
+                            .fillMaxWidth(),
+                        lineHeight = 15.sp,
+                        fontSize = 13.sp,
                     )
 
                 }
