@@ -106,7 +106,7 @@ fun fotos() {
                     .width(100.dp)
                     .height(50.dp)
             ) {
-                Text(text = "Siguiente")
+                Text(text = "next")
             }
         }
         when(num){
