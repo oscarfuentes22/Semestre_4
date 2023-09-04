@@ -63,13 +63,538 @@ class Galeria : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    fotos()
                 }
             }
         }
     }
 }
+@Composable
+fun fotos() {
+    var num = 0
+    Column(){
+        Spacer(modifier = Modifier.padding(10.dp))
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(50.dp),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ){
+            Button(
+                onClick = {
+                    if(num == 0){
+                        num = 0
+                    }else{
+                        num--
+                    }
+                },
+                modifier = Modifier
+                    .width(100.dp)
+                    .height(50.dp)
+            ) {
+                Text(text = "Anterior")
+            }
+            Button(
+                onClick = {
+                    if(num == 0){
+                        num = 0
+                    }else{
+                        num++
+                    }
+                },
+                modifier = Modifier
+                    .width(100.dp)
+                    .height(50.dp)
+            ) {
+                Text(text = "Siguiente")
+            }
+        }
+        when(num){
+             0 -> {
+                 with(
+                     Image(
+                         painter = painterResource(id = R.drawable.tu_me_dejaste_de_queres),
+                         contentDescription = "Imagen 1",
+                         modifier = Modifier
+                             .fillMaxWidth()
+                             .height(600.dp),
+                         contentScale = ContentScale.Crop
+                     )
+                 ) {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(500.dp)
+                        ) {
+                            this
+                            Column(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .height(600.dp)
+                                    .background(
+                                        Brush.verticalGradient(
+                                            colors = listOf(
+                                                Color.Transparent,
+                                                Color.Black
+                                            )
+                                        )
+                                    )
+                                    .padding(10.dp),
+                                verticalArrangement = Arrangement.Bottom
+                            ) {
+                                Text(
+                                    text = "Tu me dejaste de querer",
+                                    color = Color.White,
+                                    fontSize = 30.sp,
+                                    fontWeight = FontWeight.Bold
+                                )
+                                Text(
+                                    text = "C Tangana",
+                                    color = Color.White,
+                                    fontSize = 20.sp,
+                                    fontWeight = FontWeight.Bold
+                                )
+                            }
+                        }
+                 }
+            }
+            1 -> {
+                with(
+                    Image(
+                        painter = painterResource(id = R.drawable.casualidad),
+                        contentDescription = "Imagen 2",
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(650.dp),
+                        contentScale = ContentScale.Crop
+                    )
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(500.dp)
+                    ) {
+                        this
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(600.dp)
+                                .background(
+                                    Brush.verticalGradient(
+                                        colors = listOf(
+                                            Color.Transparent,
+                                            Color.Black
+                                        )
+                                    )
+                                )
+                                .padding(10.dp),
+                            verticalArrangement = Arrangement.Bottom
+                        ) {
+                            Text(
+                                text = "CASUALIDAD",
+                                color = Color.White,
+                                fontSize = 30.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                            Text(
+                                text = "Mora",
+                                color = Color.White,
+                                fontSize = 20.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
+                    }
+                }
+            }
+            2 -> {
+                with(
+                    Image(
+                        painter = painterResource(id = R.drawable.en_la_orilla),
+                        contentDescription = "Imagen 3",
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(650.dp),
+                        contentScale = ContentScale.Crop
+                    )
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(500.dp)
+                    ) {
+                        this
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(600.dp)
+                                .background(
+                                    Brush.verticalGradient(
+                                        colors = listOf(
+                                            Color.Transparent,
+                                            Color.Black
+                                        )
+                                    )
+                                )
+                                .padding(10.dp),
+                            verticalArrangement = Arrangement.Bottom
+                        ) {
+                            Text(
+                                text = "En la orilla",
+                                color = Color.White,
+                                fontSize = 30.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                            Text(
+                                text = "mora",
+                                color = Color.White,
+                                fontSize = 20.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
+                    }
+                }
+            }
+            3 -> {
+                with(
+                    Image(
+                        painter = painterResource(id = R.drawable.flores_en_an_nimo),
+                        contentDescription = "Imagen 4",
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(650.dp),
+                        contentScale = ContentScale.Crop
+                    )
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(500.dp)
+                    ) {
+                        this
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(600.dp)
+                                .background(
+                                    Brush.verticalGradient(
+                                        colors = listOf(
+                                            Color.Transparent,
+                                            Color.Black
+                                        )
+                                    )
+                                )
+                                .padding(10.dp),
+                            verticalArrangement = Arrangement.Bottom
+                        ) {
+                            Text(
+                                text = "Flores en anónimo",
+                                color = Color.White,
+                                fontSize = 30.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                            Text(
+                                text = "eladio",
+                                color = Color.White,
+                                fontSize = 20.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
+                    }
+                }
+            }
+            4 -> {
+                with(
+                    Image(
+                        painter = painterResource(id = R.drawable.golden_hour),
+                        contentDescription = "Imagen 3",
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(650.dp),
+                        contentScale = ContentScale.Crop
+                    )
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(500.dp)
+                    ) {
+                        this
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(600.dp)
+                                .background(
+                                    Brush.verticalGradient(
+                                        colors = listOf(
+                                            Color.Transparent,
+                                            Color.Black
+                                        )
+                                    )
+                                )
+                                .padding(10.dp),
+                            verticalArrangement = Arrangement.Bottom
+                        ) {
+                            Text(
+                                text = "Golden hour",
+                                color = Color.White,
+                                fontSize = 30.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                            Text(
+                                text = "jvke",
+                                color = Color.White,
+                                fontSize = 20.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
+                    }
+                }
+            }
+            5 -> {
+                with(
+                    Image(
+                        painter = painterResource(id = R.drawable.leave_me_like_this),
+                        contentDescription = "Imagen 6",
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(650.dp),
+                        contentScale = ContentScale.Crop
+                    )
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(500.dp)
+                    ) {
+                        this
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(600.dp)
+                                .background(
+                                    Brush.verticalGradient(
+                                        colors = listOf(
+                                            Color.Transparent,
+                                            Color.Black
+                                        )
+                                    )
+                                )
+                                .padding(10.dp),
+                            verticalArrangement = Arrangement.Bottom
+                        ) {
+                            Text(
+                                text = "leave me like this",
+                                color = Color.White,
+                                fontSize = 30.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                            Text(
+                                text = "Skrillex",
+                                color = Color.White,
+                                fontSize = 20.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
+                    }
+                }
+            }
+            6 -> {
+                with(
+                    Image(
+                        painter = painterResource(id = R.drawable.lo_que_hay_x_aqui),
+                        contentDescription = "Imagen 3",
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(650.dp),
+                        contentScale = ContentScale.Crop
+                    )
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(500.dp)
+                    ) {
+                        this
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(600.dp)
+                                .background(
+                                    Brush.verticalGradient(
+                                        colors = listOf(
+                                            Color.Transparent,
+                                            Color.Black
+                                        )
+                                    )
+                                )
+                                .padding(10.dp),
+                            verticalArrangement = Arrangement.Bottom
+                        ) {
+                            Text(
+                                text = "Lo que hay aquí",
+                                color = Color.White,
+                                fontSize = 30.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                            Text(
+                                text = "rels b",
+                                color = Color.White,
+                                fontSize = 20.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
+                    }
+                }
+            }
+            7 -> {
+                with(
+                    Image(
+                        painter = painterResource(id = R.drawable.rara_vez),
+                        contentDescription = "Imagen 3",
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(650.dp),
+                        contentScale = ContentScale.Crop
+                    )
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(500.dp)
+                    ) {
+                        this
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(600.dp)
+                                .background(
+                                    Brush.verticalGradient(
+                                        colors = listOf(
+                                            Color.Transparent,
+                                            Color.Black
+                                        )
+                                    )
+                                )
+                                .padding(10.dp),
+                            verticalArrangement = Arrangement.Bottom
+                        ) {
+                            Text(
+                                text = "Rara vez",
+                                color = Color.White,
+                                fontSize = 30.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                            Text(
+                                text = "milo j",
+                                color = Color.White,
+                                fontSize = 20.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
+                    }
+                }
+            }
+            8 -> {
+                with(
+                    Image(
+                        painter = painterResource(id = R.drawable.rincon),
+                        contentDescription = "Imagen 3",
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(650.dp),
+                        contentScale = ContentScale.Crop
+                    )
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(500.dp)
+                    ) {
+                        this
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(600.dp)
+                                .background(
+                                    Brush.verticalGradient(
+                                        colors = listOf(
+                                            Color.Transparent,
+                                            Color.Black
+                                        )
+                                    )
+                                )
+                                .padding(10.dp),
+                            verticalArrangement = Arrangement.Bottom
+                        ) {
+                            Text(
+                                text = "Rincón",
+                                color = Color.White,
+                                fontSize = 30.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                            Text(
+                                text = "milo j",
+                                color = Color.White,
+                                fontSize = 20.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
+                    }
+                }
+            }
+            9 -> {
+                with(
+                    Image(
+                        painter = painterResource(id = R.drawable.sustancia),
+                        contentDescription = "Imagen 3",
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(650.dp),
+                        contentScale = ContentScale.Crop
+                    )
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(500.dp)
+                    ) {
+                        this
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(600.dp)
+                                .background(
+                                    Brush.verticalGradient(
+                                        colors = listOf(
+                                            Color.Transparent,
+                                            Color.Black
+                                        )
+                                    )
+                                )
+                                .padding(10.dp),
+                            verticalArrangement = Arrangement.Bottom
+                        ) {
+                            Text(
+                                text = "Sustancia",
+                                color = Color.White,
+                                fontSize = 30.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                            Text(
+                                text = "judeline",
+                                color = Color.White,
+                                fontSize = 20.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
+                    }
+                }
+            }
+        }
 
+
+    }
+}
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
@@ -79,12 +604,13 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 }
 
 
+
 @RequiresApi(Build.VERSION_CODES.O)
 @Preview(showBackground = true,
         showSystemUi = true)
 @Composable
 fun GreetingPreview() {
     Lab6Theme {
-        Login()
+        fotos()
     }
 }
